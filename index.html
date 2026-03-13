@@ -16,11 +16,10 @@
         tg.ready();
         tg.expand();
 
-        // Магия определения таймзоны
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         
-        // Отправляем данные боту и закрываемся через полсекунды
         setTimeout(() => {
+            tg.showAlert("Синхронизация часового пояса"); // Маленькое окно с твоим текстом
             tg.sendData(tz);
             tg.close();
         }, 500);
